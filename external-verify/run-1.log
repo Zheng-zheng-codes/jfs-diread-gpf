@@ -1,0 +1,8 @@
+[2026-11-18 12:28:35] kernel=/workspace/linux-7.4-rc3/arch/x86/boot/bzImage sha=0c16409f8aec508ac44a63e631c2bd352536401f3fd0856df1d839fb953a1882
+[2026-11-18 12:28:35] image=/workspace/vm/trixie-7.4-rc3.img
+[2026-11-18 12:28:35] programs=/workspace/validation/rc3-jfs-diread-verify-20261118/repro.kernsight.prog sha=6629fc79332d4c2ade1e327381df079891c9e381198fb811fbfe81de71fb0df0 runsec=900 procs=8 repeat=0
+[2026-11-18 12:29:41] ssh-up after 18s
+[2026-11-18 12:29:42] copying syz binaries and program set
+[2026-11-18 12:29:45] starting syz-execprog
+[2026-11-18 12:31:01] exec elapsed=76s hit=1
+[2026-11-18 12:32:18] TARGET-HIT: WARNING in diRead

@@ -1,0 +1,23 @@
+Extracting prog: 0s
+Minimizing prog: 0s
+Simplifying prog options: 0s
+Extracting C: 0s
+Simplifying C: 0s
+
+
+kernsight state-primed reproduction:
+00:01:25 state-primed repro started for "general protection fault in diRead" (64 log programs, target pre-run state=true, budget=20m0s, workers=1)
+00:02:59 cache warm-up: replaying 151 programs from the previous attempt
+00:10:09 phase1 replay done: 64/64 entries executed
+00:10:14 state distance by category (combined 1.29): filesystem_ext4=4.35 memory_numa=2.96 storage_io=2.94 network_interfaces=2.88 memory_page_activity=2.53 network_ip=2.42 network_tcp=1.95 process_activity=1.84 memory_vm_events=1.58 cpu_scheduler=1.50 xfs_metadata=1.16 memory_vm_gauges=1.08 cpu_cgroup=1.07 process_topology=0.99 xfs_io_transactions_1=0.92 cpu_pressure=0.88 xfs_btrees_4=0.84 memory_slab_objects=0.81 memory_cgroup=0.69 memory_capacity=0.64 xfs_btrees_3=0.58 xfs_io_transactions_2=0.54 cpu_perf_events=0.50 memory_hugepages=0.48 xfs_btrees_1=0.46 filesystem_capacity=0.32 kernel_objects=0.31 xfs_btrees_2=0.18 io_pressure=0.16 memory_pressure=0.00 log_fault_events=0.00 log_filesystems=0.00 log_severity_volume=0.00 log_subsystems=0.00 memory_reclaim=0.00 network_icmp=0.00
+00:10:14 state distance after replay: 1.292
+00:12:14 priming round 1: model ranking failed: kernsight: request POST /repro_prime: Post "http://127.0.0.1:8765/repro_prime": context deadline exceeded
+00:12:14 phase2 priming done: 0 rounds, distance 1.292
+00:12:18 state snapshot taken after construction: testcases will run from the frozen state
+00:12:18 phase3 candidates: 46 suspects, 
+00:12:18 candidate 1/46: source=report-named impact=0.00, running testcase
+00:13:37 candidate 1 reproduced the crash from the frozen state snapshot
+00:13:39 state snapshot exported to /workspace/kernsight_workspace_7.4-rc3/runs/syzkaller/crashes/ede73ba141e9894db5fea953ada12ff50417902b/state (restore it, then run the testcase to reproduce)
+00:13:39 state-primed repro verified against the state snapshot
+00:13:39 syz reproducer is ready; C conversion is deferred to the independent budgeted task (set KERNSIGHT_REPRO_AUTO_C=1 to convert in the automatic path)
+00:13:39 state-primed repro crashed (distance 1.292 -> 1.292, 215 replay + 0 priming programs, 0 infra failures, 0 vm recoveries, verified=true)
